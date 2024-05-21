@@ -1,11 +1,7 @@
 import greenfoot.*;  // (World, Actor, GreenfootImage, Greenfoot and MouseInfo)
 
-/**
- * Write a description of class startScreen here.
- * 
- * @author Mark Mauro 
- * @version 1.8
- */
+
+
 public class startScreen extends World
 {
 

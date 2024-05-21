@@ -1,19 +1,9 @@
 import greenfoot.*;  // (World, Actor, GreenfootImage, Greenfoot and MouseInfo)
 
-/**
- * Write a description of class Mario here.
- * 
- * @author Mark Mauro 
- * @version 1.8
- */
 public class Mario extends Mover
 {
-
     private final GreenfootImage walk1Right = new GreenfootImage("mario-walk1.gif");
- 
     private final GreenfootImage walk1Left = new GreenfootImage(walk1Right);
-  
-
     private final GreenfootImage jumper = new GreenfootImage("mario-jump.gif");
 
     private boolean facingRight;
@@ -26,6 +16,9 @@ public class Mario extends Mover
     private boolean isJumping;
     public static boolean isDead;
 
+    // The `public Mario()` constructor in the `Mario` class is initializing various instance variables
+    // and setting up initial configurations for the Mario character object. Here's a breakdown of what
+    // each line is doing:
     public Mario()
     {
         this.speed = 7;
@@ -34,9 +27,6 @@ public class Mario extends Mover
         this.isDead = false;
 
         walk1Right.scale(48,50);
-       
-
- 
         walk1Left.scale(48,50);
         
 
@@ -48,6 +38,10 @@ public class Mario extends Mover
         marioBottomCentre = getImage().getHeight() / 2;
     }
 
+    /**
+     * This Java function checks if the object is dead and performs corresponding actions based on its
+     * state.
+     */
     public void act()
     {
         if (isDead == false)
@@ -77,7 +71,6 @@ public class Mario extends Mover
     /**
      * level restrictions
      */
-
     private void boundary()
     {
         Levels L = (Levels)getWorld();
@@ -95,8 +88,11 @@ public class Mario extends Mover
         }
     }
 
+    /**
+     * The function `checkKeys` in Java checks for key inputs to control character movement and
+     * jumping.
+     */
     private void checkKeys()
-
     {
         isKeyPressed = false;
 
@@ -104,7 +100,6 @@ public class Mario extends Mover
         {
             animationCounter ++;
             walkRight();
-         
             isKeyPressed = true;
             facingRight = true;
         }
@@ -122,10 +117,13 @@ public class Mario extends Mover
             isKeyPressed = true;
             jump();
         }
-
-    
     }
 
+    /**
+     * The fall() function updates the position of an object as it falls, increases its vertical speed,
+     * checks for collision with the ground, and handles actions when the object falls out of the
+     * world.
+     */
     private void fall()
     {
         setLocation (getX(),getY() + verticalSpeed);
@@ -169,6 +167,10 @@ public class Mario extends Mover
         return true;
     }
 
+    /**
+     * The `jump` function plays a sound, adjusts the vertical speed, and initiates falling in a Java
+     * program.
+     */
     private void jump()
     {
         Greenfoot.playSound("smb_jump-small.wav");
@@ -188,37 +190,33 @@ public class Mario extends Mover
         getWorld().addObject(new MarioDead(), getX(), getY());
         getWorld().removeObject(this);
     }
-    
-    
-    
-    
+    /**
+     * The `walkRight` method moves an object to the right and changes its image based on the
+     * `animationCounter` value.
+     */
     private void walkRight()
     {
         moveRight();
-
-
-         if (animationCounter < 8)
+        if (animationCounter < 8)
         {
             setImage(walk1Right);
         }
-       
         else if (animationCounter < 16)
         {
-          
             animationCounter = 0;
             return;
         }
     }
 
+    /**
+     * The `walkLeft` function moves an object left and resets the animation counter if it is less than
+     * 16.
+     */
     private void walkLeft()
     {
         moveLeft();
-     
-
-        
         if (animationCounter < 16)
         {
-       
             animationCounter = 0;
             return;
         }

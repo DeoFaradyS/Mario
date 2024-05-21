@@ -1,11 +1,6 @@
 import greenfoot.*;  // (World, Actor, GreenfootImage, Greenfoot and MouseInfo)
 
-/**
- * Write a description of class MarioDead here.
- * 
- * @author Mark Mauro
- * @version 1.8
- */
+
 public class MarioDead extends Mover
 {
     private final GreenfootImage dead = new GreenfootImage("mario-dead.gif");
@@ -25,11 +20,14 @@ public class MarioDead extends Mover
      */
     public void act() 
     {
-        
         animateDeath();
-       
     }    
 
+    /**
+     * The `animateDeath` function increases the `movementCounter`, moves the object up until a certain
+     * point, then moves it down until it reaches a specific position, triggering a level reset and
+     * sound effect.
+     */
     private void animateDeath()
     {
         movementCounter ++;
@@ -44,18 +42,16 @@ public class MarioDead extends Mover
         }
         else if (getY() >= getWorld().getHeight() + 100)
         {
-          Levels L = (Levels) getWorld();    
-          L.setupLevel(L.level);
-           Greenfoot.playSound("smb_mariodie.wav");
+        Levels L = (Levels) getWorld();    
+        L.setupLevel(L.level);
+        Greenfoot.playSound("smb_mariodie.wav");
         }
         
         else if (movementCounter > 150)
         {
             this.speed = 5;
             moveDown();
-           
         }
-        
     }
 
 }

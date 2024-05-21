@@ -1,11 +1,9 @@
 import greenfoot.*;  // (World, Actor, GreenfootImage, Greenfoot and MouseInfo)
-
 /**
- * Write a description of class BgItem here.
- * 
- * @author Mark Mauro
- * @version 1.8
+ * The `BgItem` class in Java initializes background objects based on a selection parameter provided to
+ * its constructor.
  */
+
 public class BgItem extends Mover
 {
     private final GreenfootImage sBush = new GreenfootImage("bush-small-bg.gif");
@@ -15,6 +13,9 @@ public class BgItem extends Mover
     private final GreenfootImage Flag = new GreenfootImage("flag.gif");
     private final GreenfootImage Flagpole = new GreenfootImage("flagpole.gif");
 
+    // Konstruktor `public BgItem(int selection)` di kelas `BgItem` ini bertanggung jawab untuk 
+    // menginisialisasi objek `BgItem` berdasarkan parameter `selection` yang dioperkan kepadanya. 
+    // Berikut ini yang dilakukannya berdasarkan nilai `selection`:
     public BgItem(int selection)
     {
         this.selection = selection;
@@ -41,8 +42,8 @@ public class BgItem extends Mover
     }
     
     /**
-     * Act - do whatever the BgItem wants to do. This method is called whenever
-     * the 'Act' or 'Run' button gets pressed in the environment.
+    * Bertindak - lakukan apapun yang ingin dilakukan bgitem.Metode ini dipanggil kapan saja
+     * Tombol 'ACT' atau 'Run' ditekan di lingkungan.
      */
     public void act() 
     {

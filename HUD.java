@@ -1,11 +1,6 @@
 import greenfoot.*;  // (World, Actor, GreenfootImage, Greenfoot and MouseInfo)
 
-/**
- * Write a description of class HUD here.
- * 
- * @author Mark Mauro
- * @version 1.8
- */
+
 public class HUD extends Mover
 {
     private final GreenfootImage life = new GreenfootImage ("life.gif");
@@ -20,16 +15,16 @@ public class HUD extends Mover
         
     }    
     
-    
-    
-     public HUD(int selection)
+
+    // This part of the code is a constructor for the HUD class in Java. When an instance of the HUD
+    // class is created, this constructor is called with an integer parameter `selection`.
+    public HUD(int selection)
     {
         this.selection = selection;
         if (selection == 1)
         {
             setImage(life);
             life.scale(35,35);
-      
         }
     }
 }

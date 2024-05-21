@@ -1,11 +1,5 @@
 import greenfoot.*;  // (World, Actor, GreenfootImage, Greenfoot and MouseInfo)
 
-/**
- * Write a description of class Ground here.
- * 
- * @author Mark Mauro
- * @version 1.8
- */
 public class Ground extends Mover
 {
     private final GreenfootImage Stile = new GreenfootImage("stepping-tile.gif");
@@ -39,7 +33,6 @@ public class Ground extends Mover
         }
     }
     
-   
     /**
      * Act - do whatever the Ground wants to do. This method is called whenever
      * the 'Act' or 'Run' button gets pressed in the environment.
@@ -61,13 +54,17 @@ public class Ground extends Mover
         else if (selection == 4)
         {
         }
-         else if  (selection == 5)
+        else if  (selection == 5)
         {
             movementCounter++;
             moveUpAndDown();
         }
     }    
     
+    /**
+     * The function `steppingTileCollisionDetection` detects collisions with a Mario actor on different
+     * sides and adjusts their location accordingly.
+     */
     private void steppingTileCollisionDetection()
     {
         Actor MarioLeft = getOneObjectAtOffset (27, 0, Mario.class);

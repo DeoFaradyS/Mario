@@ -1,11 +1,6 @@
 import greenfoot.*;  // (World, Actor, GreenfootImage, Greenfoot and MouseInfo)
 
-/**
- * Write a description of class MyWorld here.
- * 
- * @author Mark Mauro
- * @version 1.8
- */
+
 public class Levels extends World
 {
     private Counter scoreCounter;
@@ -32,6 +27,13 @@ public class Levels extends World
         setPaintOrder(HUD.class, Counter.class, Transition.class, Mario.class, MarioDead.class,Ground.class, BgItem.class);
     }
     
+    /**
+     * The `setupLevel` function in Java sets up different levels in a game by adding objects based on
+     * the specified level number.
+     * 
+     * @param lvl The `setupLevel` method you provided is used to set up different levels in a game.
+     * The `lvl` parameter is used to determine which level to set up based on its value.
+     */
     public void setupLevel(int lvl)
     {
         removeObjects(getObjects(null));
@@ -161,6 +163,10 @@ public class Levels extends World
         }
     }
     
+    /**
+     * The `worldColorLevel` function sets the background color of the world to a specific shade of
+     * blue.
+     */
     public void worldColorLevel()
     {
         GreenfootImage background = getBackground();
@@ -169,6 +175,9 @@ public class Levels extends World
             
     }
     
+   /**
+    * The function `worldColorGameOver` sets the background color of the world to black.
+    */
     public void worldColorGameOver()
     {
         GreenfootImage background = getBackground();
