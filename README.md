@@ -29,4 +29,4 @@ Proyek ini merupakan tugas yang diberikan sebagai bagian dari mata kuliah Grafik
 
 ## Kredit
 - Deo Farady Santoso - 12012200447 - Rekayasa Perangkat Lunak
-- Awan Dhani - 120122 - Rekayasa Perangkat Lunak
+- Awan Dhani Wahono - 1201220443 - Rekayasa Perangkat Lunak
