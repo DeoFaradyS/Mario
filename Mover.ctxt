@@ -1,20 +1,24 @@
 #BlueJ class context
 comment0.target=Mover
-comment0.text=\r\n\ Write\ a\ description\ of\ class\ Mover\ here.\r\n\ \r\n\ @author\ Mark\ Mauro\r\n\ @version\ 1.8\r\n
 comment1.params=
 comment1.target=void\ moveRight()
 comment1.text=\r\n\ Move\ an\ object\ to\ the\ right\r\n
 comment2.params=
 comment2.target=void\ moveLeft()
-comment2.text=\r\n\ Move\ an\ object\ to\ the\ right\r\n
+comment2.text=\r\n\ The\ `moveLeft`\ function\ in\ Java\ moves\ the\ object\ to\ the\ left\ by\ adjusting\ its\ X\ coordinate\ based\r\n\ on\ the\ speed.\r\n
 comment3.params=
 comment3.target=void\ moveUp()
+comment3.text=\r\n\ The\ `moveUp`\ function\ in\ Java\ moves\ an\ object\ upwards\ by\ a\ specified\ speed.\r\n
 comment4.params=
 comment4.target=void\ moveDown()
+comment4.text=\r\n\ The\ `moveDown`\ function\ in\ Java\ moves\ an\ object\ downwards\ by\ adjusting\ its\ Y\ coordinate\ based\ on\r\n\ a\ specified\ speed.\r\n
 comment5.params=
 comment5.target=void\ moveGoomba()
+comment5.text=\r\n\ The\ `moveGoomba`\ function\ alternates\ between\ moving\ the\ Goomba\ left\ and\ right\ within\ a\ specified\r\n\ range\ of\ movement.\r\n
 comment6.params=
 comment6.target=void\ moveUpAndDown()
+comment6.text=\r\n\ This\ Java\ function\ moves\ an\ object\ up\ and\ down\ while\ checking\ for\ collisions\ with\ another\ object\r\n\ of\ class\ Mario\ and\ adjusting\ their\ position\ accordingly.\r\n
 comment7.params=
 comment7.target=void\ moveHFPlatform()
+comment7.text=\r\n\ This\ Java\ function\ moves\ a\ platform\ up\ and\ down\ while\ checking\ for\ collision\ with\ a\ Mario\ object\r\n\ to\ adjust\ its\ position\ accordingly.\r\n
 numComments=8
